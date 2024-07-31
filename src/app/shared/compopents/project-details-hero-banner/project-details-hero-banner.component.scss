@@ -1,0 +1,86 @@
+.project-details-hero-banner{
+    background-color : var(--pf-dark-blue-color);
+    color : var(--pf-background-color);
+    display: flex;
+    justify-content: center;
+
+    .content{
+        display: flex;
+        flex-direction: row;
+        width : 100%;
+        margin-top: 12rem;
+        align-items: flex-start;
+        justify-content: space-between;
+
+        .texts-bloc{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 250px;
+            width: 100%;
+
+            span{
+                padding: 10px 20px;
+                border-radius: 30px;
+                margin-bottom: 23px;
+                border: 1px solid #efefef;
+                font-size: 14px;
+                letter-spacing: 3px;
+                font-style: italic;
+            }
+
+            h4{
+                font-size: 2.7rem;
+                margin-bottom : 25px ;
+                text-align: center;
+            }
+
+            p{
+                font-size: 15px;
+                line-height: 23px;
+                font-weight: 300;
+                margin-bottom: 25px;
+                text-align: center;
+            }
+
+            .buttons{
+                display: flex;
+                gap: 1.5rem;
+                margin-top: 20px;
+                flex-wrap: wrap;
+
+                button{
+                    padding: 10px 30px;
+                    border-radius: 5px;
+                    border: none;
+                    font-size: 15px;
+                    cursor: pointer;
+                    font-size: 15px;
+                    transition: all 0.3s ease-in-out;
+
+                    &:hover{
+                        transform: translateY(-5px);
+                        box-shadow: 0 6px 20px white;
+                    }
+                }
+
+                .public{
+                    background-color: var(--pf-yellow-color);
+                    font-weight: bold;
+                }
+
+                .admin{
+                    background-color: transparent;
+                    border: 2px solid white;
+                    color: white;
+                }
+            }
+        }
+
+        img{
+            width: 300px;
+            object-fit: cover;
+        }
+    }
+
+}

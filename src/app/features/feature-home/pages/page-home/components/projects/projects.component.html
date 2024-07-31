@@ -1,0 +1,30 @@
+<section class="projects" id="projets">
+    <div class="content my-container">
+        <h2 class="title">Mes Réalisations</h2>
+
+        <p class="summary">
+            <span>Vous retrouvez ici quelques projets sur lesquels j'ai été emmené à travailler.</span>
+            <span>Pour chacun d'entre eux, vous pouvez aussi accéder à une étude de cas détaillant mon approche et les différentes phases phases suivies tout au long du projet jusqu'à leurs livraisons.</span>
+        </p>
+
+        <div class="project-list">
+            <ng-container *ngFor="let projectSummary of projectSummaryList">
+                <div class="project" (click)="onProjectSummaryClicked(projectSummary.id)"  >
+                    <div class="project-image">
+                        <img src={{projectSummary.image}} alt={{projectSummary.summary}} />
+                    </div>
+                    
+                    <div class="texts">
+                        <span class="project-title">{{projectSummary.title}}</span>
+                        <span class="project-summary">{{projectSummary.summary}}</span>
+
+                        <button>
+                            <span>Voir plus</span>
+                            <i class="pi pi-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+</section>

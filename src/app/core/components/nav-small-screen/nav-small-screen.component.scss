@@ -1,0 +1,46 @@
+.mask-nav-small-screen{
+    z-index: 1 !important;
+
+    .style-class-nav-small-screen{
+        height: 100%;
+        max-height: 100% !important;
+        width: 100%;
+        margin: 0 !important;
+        padding-top: 6em;
+    
+        .p-dialog-content{
+            .nav-small-screen{
+                background: var(--pf-background-color);
+                height: 100%;
+
+                nav{
+                    flex-direction: column;
+                    align-items: flex-end;
+                    justify-content: flex-start;
+                    width: 100%;
+                    padding: 30px;
+                    color: black;
+                    display: flex;
+                    
+                    ul{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-end;
+    
+                        li{
+                            margin: 20px 0 0 0;
+    
+                            a{
+                                font-size: 1.1em;
+                                cursor: pointer;
+                                padding: 7px 20px;
+                                border-radius: 100px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+

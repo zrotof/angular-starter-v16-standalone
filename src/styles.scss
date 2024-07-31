@@ -6,8 +6,55 @@
     padding: 0;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
+    font-family: Verdana, sans-serif;
 }
 
 html {
     scroll-behavior: smooth;
+}
+
+ul{
+    list-style: none;
+}
+
+.header-container{
+    max-width: 1400px;
+    padding: 10px 20px;
+}
+
+.my-container{
+    max-width: 1200px;
+    padding: 10px 20px;
+}
+
+.title{
+    font-size: 3em;
+    font-weight: bold;
+    padding: 30px 0 10px 0;
+    position: relative;
+    margin-bottom: 50px;
+
+    &::before{
+        content: "";
+        position: absolute;
+        width: 2em;
+        height: 3px;
+        bottom:0;
+        border-bottom: 4px solid var(--pf-yellow-color);
+    }
+}
+
+.dynamic-span{
+    position: absolute;
+    transform-origin: 0 80px;
+    font-weight: bold;
+    width: -webkit-fill-available;
+    display: flex;
+    justify-content: center;
+    pointer-events: none;
+}
+
+.active-link{
+    background-color: var(--pf-dark-blue-color);
+    color: var(--pf-yellow-color) !important;
 }

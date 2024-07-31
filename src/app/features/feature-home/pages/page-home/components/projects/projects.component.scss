@@ -1,0 +1,120 @@
+.projects{
+            
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    color:var(--pf-dark-blue-color);
+    padding-top: 5rem;
+  
+    .content{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+
+        .summary{
+            margin-bottom: 40px;
+            display: flex;
+            flex-direction: column;
+            font-size: 15px;
+            line-height: 23px;
+
+            span{
+                margin-bottom: 10px;
+            }
+        }
+
+        .project-list{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 1.5rem;
+
+            .project{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                border-radius: 7px;
+                overflow: hidden;
+                cursor: pointer;
+                color: var(--pf-dark-blue-color);
+                border: 1px solid #5e5e5e;
+                padding: 13px;
+                transition: color 0.3s ease-in-out, transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+
+                &:hover{
+                    background-color: var(--pf-dark-blue-color);
+                    color: var(--pf-background-color);
+                    transform: scale(1.05);
+                    padding: 0;
+                    border: none;
+
+                    .texts{
+                        padding: 13px;
+
+                        button{
+                            color: var(--pf-yellow-color);
+                        }
+                    }
+                }
+
+                .project-image{
+                    width: 100%;
+                    height: 200px;
+                    overflow: hidden;
+                    transition: all 0.3s ease-in-out;
+                    margin-bottom: 15px;
+                    border-radius: 5px 5px 0 0;
+
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        object-position: center;
+                    }
+                }
+
+                .texts{
+                    display: flex;
+                    flex-direction: column;
+
+                    .project-title{
+                        font-weight: bold;
+                        font-size: 1.3em;
+                        margin-bottom: 15px;
+                    }
+    
+                    .project-summary{
+                        font-size: 15px;
+                        line-height: 21px;
+                        font-weight: 350;
+                        margin-bottom: 15px;
+                    }
+                    
+                    button{
+                        display: flex;
+                        align-items: center;
+                        padding: 6px 22px 6px 0;
+                        border: none;
+                        cursor: pointer;
+                        background-color: transparent;
+                        font-weight: bold;
+
+                        span{
+                            font-size: 14px;
+                            font-style: italic;
+                        }
+
+                        i{
+                            font-size: 0.9rem;
+                            margin-left: 10px;
+                        }
+                    }
+                }
+    
+            }
+
+        }
+
+    }
+}

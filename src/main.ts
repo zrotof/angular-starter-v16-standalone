@@ -4,14 +4,14 @@ import { provideAnimations } from '@angular/platform-browser/animations';
 import { bootstrapApplication } from '@angular/platform-browser';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
-import { Routes, provideRouter, withEnabledBlockingInitialNavigation } from '@angular/router';
+import { routes } from './app/app.routes';
+
+import { provideRouter, withEnabledBlockingInitialNavigation } from '@angular/router';
 
 import { environment } from './environments/environment';
 
 import { AppComponent } from './app/app.component';
 
-const routes: Routes = [
-];
 
 if (environment.production) {
   enableProdMode();

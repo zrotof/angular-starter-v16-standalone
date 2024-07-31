@@ -1,0 +1,58 @@
+<header (scroll)="onWindowScroll()" [ngClass]="shouldApplyBackground ? 'navbar-background-on-scroll' : ''">
+
+    <div class="content header-container">
+        <img class="logo" src="../../../assets/img/logo-portfolio.png" alt="logo sm digitalizer"/>
+
+        <div class="header-right">
+
+            <nav>
+                <ul>
+                    <li>
+                        <a (click)="setActiveLinkAndNavigate(1,'accueil')">Accueil</a>
+                    </li>
+
+                    <li>
+                        <a (click)="setActiveLinkAndNavigate(2,'projets')">Réalisations</a>
+                    </li>
+
+                    <li>
+                        <a (click)="setActiveLinkAndNavigate(3,'a-propos')">A Propos</a>
+                    </li>
+
+                    <li>
+                        <a (click)="setActiveLinkAndNavigate(4,'services')">Services</a>
+                    </li> 
+
+                    <li>
+                        <a (click)="setActiveLinkAndNavigate(5,'contact')">Contactez-moi</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div
+                class="burger" 
+                (click)="onBurgerMenu()"
+                [ngClass]="isBurgerMenuClicked === true ? 'show-cross': ''"
+                >            
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <p-dialog 
+        [(visible)]="isBurgerMenuClicked" 
+        position="right" 
+        [draggable]="false"
+        [blockScroll] = "true"
+        styleClass = "style-class-nav-small-screen"
+        maskStyleClass = "mask-nav-small-screen"
+        [showHeader]="false"
+    >
+        <app-nav-small-screen 
+            (onNavigationOnSmallScreenEvent)="setActiveLinkAndNavigate($event.id, $event.anchor)"
+            >
+        </app-nav-small-screen>
+    </p-dialog>
+</header>

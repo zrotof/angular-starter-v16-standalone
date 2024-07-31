@@ -1,0 +1,93 @@
+.range-project-image-slider{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: -150px;
+    
+    .content{
+        width: 100%;
+
+        .images-slider{
+            .p-carousel-content{
+                .p-carousel-container{
+                    button{
+                        display: none;
+                    }
+
+                    .p-carousel-items-content{
+                        .p-carousel-item{
+                            .image-viewer{
+                                background-repeat: no-repeat;
+                                background-size: cover;
+                                background-position: center;
+                                height: 300px;
+                                width: 95%;
+                                margin: auto;
+                                border: 1px solid #ffffff70;
+                                cursor: pointer;
+                                transition: all 0.3s ease-in-out;
+                                position : relative;
+
+                                &:hover{
+                                    transform: scale(1.05);
+
+                                    &::after{
+                                        content: "";
+                                        position: absolute;
+                                        top: 0;
+                                        left: 0;
+                                        width: 100%;
+                                        height: 100%;
+                                        background-color: rgba(0, 0, 0, 0.518);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .p-carousel-indicators{
+                    width: 100%;
+                    margin-top: 30px;
+                    display: flex;
+                    align-items: center;
+
+                    .p-carousel-indicator{
+                        margin-right: 0.5rem;
+                        margin-bottom: 0.5rem;
+
+                        button{
+                            width: 0.8rem;
+                            height: 0.8rem;
+                            border-radius: 50%;
+                            background-color: var(--pf-border-color);
+                        }
+                    }
+
+                    .p-highlight{
+                        button{
+                            background-color: var(--pf-dark-blue-color);
+                            position: relative;
+                            width: 1.5rem;
+                            height: 1.5rem;
+
+                            &::after{
+                                content: "";
+                                position: absolute;
+                                left: 50%;
+                                top: 50%;
+                                transform: translate(-50%, -50%);
+                                width: 0.7rem;
+                                height: 0.7rem;
+                                background-color: var(--pf-yellow-color);
+                                border-radius: 50%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+}

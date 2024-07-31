@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-starter-v16-standalone": {
+    "portfolio-public": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/angular-starter-v16-standalone/browser",
+            "outputPath": "dist/portfolio-public/browser",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -75,10 +75,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "angular-starter-v16-standalone:build:production"
+              "browserTarget": "portfolio-public:build:production"
             },
             "development": {
-              "browserTarget": "angular-starter-v16-standalone:build:development"
+              "browserTarget": "portfolio-public:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -86,7 +86,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-starter-v16-standalone:build"
+            "browserTarget": "portfolio-public:build"
           }
         },
         "test": {
@@ -110,7 +110,7 @@
         "server": {
           "builder": "@angular-devkit/build-angular:server",
           "options": {
-            "outputPath": "dist/angular-starter-v16-standalone/server",
+            "outputPath": "dist/portfolio-public/server",
             "main": "server.ts",
             "tsConfig": "tsconfig.server.json",
             "inlineStyleLanguage": "scss"
@@ -139,12 +139,12 @@
           "builder": "@nguniversal/builders:ssr-dev-server",
           "configurations": {
             "development": {
-              "browserTarget": "angular-starter-v16-standalone:build:development",
-              "serverTarget": "angular-starter-v16-standalone:server:development"
+              "browserTarget": "portfolio-public:build:development",
+              "serverTarget": "portfolio-public:server:development"
             },
             "production": {
-              "browserTarget": "angular-starter-v16-standalone:build:production",
-              "serverTarget": "angular-starter-v16-standalone:server:production"
+              "browserTarget": "portfolio-public:build:production",
+              "serverTarget": "portfolio-public:server:production"
             }
           },
           "defaultConfiguration": "development"
@@ -158,12 +158,12 @@
           },
           "configurations": {
             "production": {
-              "browserTarget": "angular-starter-v16-standalone:build:production",
-              "serverTarget": "angular-starter-v16-standalone:server:production"
+              "browserTarget": "portfolio-public:build:production",
+              "serverTarget": "portfolio-public:server:production"
             },
             "development": {
-              "browserTarget": "angular-starter-v16-standalone:build:development",
-              "serverTarget": "angular-starter-v16-standalone:server:development"
+              "browserTarget": "portfolio-public:build:development",
+              "serverTarget": "portfolio-public:server:development"
             }
           },
           "defaultConfiguration": "production"

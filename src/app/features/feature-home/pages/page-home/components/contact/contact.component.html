@@ -1,0 +1,93 @@
+<section class="contact" id="contact">
+        
+    <div class="content my-container">
+        <h2 class="title">Contactez-moi</h2>
+
+        <div class="speach">
+            <p>Vous avez un projet ? Vous souhaitez obtenir des conseils, un devis gratuit ?</p>
+            <p class="speach">Vous pouvez me contacter par le moyen qui vous sied le mieux parmis ceux indiqués ci-après .</p>        
+        </div>
+        
+        <div class="contact-block">
+
+            <div class="contact-ways">
+                <div class="contact-way" >
+                    <div class="icon-wrapper">
+                        <fa-icon [icon]="faPhone"></fa-icon>
+                    </div>
+
+                    <div class="text-bloc">
+                        <span>Téléphone</span>
+                        <span>(+33) 7 83 18 91 71</span>
+                    </div>
+                </div>
+    
+                <div class="contact-way">
+                    <div class="icon-wrapper">
+                        <fa-icon [icon]="faEnvelope"></fa-icon>
+                    </div>
+                    <div class="text-bloc">
+                        <span>Email</span>
+                        <span>manduel21@gmail.com</span>
+                    </div>
+                </div>
+            </div>
+    
+            <form [formGroup]="contactForm" (ngSubmit)="onSubmitContactForm()">
+                <div class="row-element">
+                    <input formControlName="name" id="name-input" type="text" placeholder="Nom">
+                    <label for="name">Nom</label>
+                    <div *ngIf="isContactFormSubmitted && f?.['name']?.['errors']" class="invalid-feedback">
+                        <div *ngIf="f?.['name']?.['errors']?.['required']">Renseignez votre nom</div>
+                    </div>
+                </div>
+
+                <div class="row-element">
+                    <input formControlName="email" id="email-input" type="text" placeholder="Email">
+                    <label for="email">Email</label>
+                    <div *ngIf="isContactFormSubmitted && f?.['email']?.['errors']" class="invalid-feedback">
+                        <div *ngIf="f?.['email']?.['errors']?.['required']">Renseignez l'addresse mail</div>
+                        <div *ngIf="f?.['email']?.['errors']?.['email']">Addresse mail invalide</div>
+                    </div>
+                </div>
+
+                <div class="row-element">
+                    <input formControlName="subject" id="objet-input" type="text" placeholder="Objet">
+                    <label for="objet-input">Objet</label>
+                </div>
+
+                <div class="row-element">
+                    <textarea formControlName="message" id="message-area" type="text" placeholder="Message"></textarea>
+                    <label for="message-area">Message</label>
+                    <div *ngIf="isContactFormSubmitted && f?.['message']?.['errors']" class="invalid-feedback">
+                        <div *ngIf="f?.['message']?.['errors']?.['required']">Message manquant</div>
+                        <div *ngIf="f?.['message']?.['errors']?.['minlength']">Votre message est trop court </div>
+                    </div>
+                </div>
+
+                <button type="submit" >
+                    <ng-container *ngIf="isContactFormSubmittedAndNotErrorOnClientSide; else defaultText">
+                        <p-progressSpinner [style]="{width: '20px', height: '20px'}" strokeWidth="8"></p-progressSpinner>
+                    </ng-container>
+                </button>
+            </form>
+            <ng-template #defaultText>
+                <span>Envoyer</span> 
+                <fa-icon [icon]="faPaperPlane"></fa-icon>
+            </ng-template>
+        </div>
+    </div>
+    <p-toast [life]="10000" [breakpoints]="{'920px': {width: '100%', right: '0', left: '0', backgroung:'red'}}">
+        <ng-template let-message pTemplate="message">
+            <div class="flex flex-column" style="flex: 1">
+                <div class="message">
+                    <fa-icon [icon]="message.data.icon"></fa-icon>
+                    <h4> {{message.data.summary}} </h4>
+                    <p> {{message.data.details}} </p>
+                    <p (click)="closeToast()"> {{message.data.greetings}} </p>
+                </div>
+            </div>
+        </ng-template>
+    </p-toast>
+
+</section>

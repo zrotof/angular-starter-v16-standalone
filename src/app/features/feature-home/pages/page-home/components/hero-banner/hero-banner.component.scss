@@ -1,0 +1,197 @@
+.hero{
+
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--pf-dark-blue-color);  
+    background: linear-gradient(283deg, #ffebb8bf 0%, #e3f2fd 100%);
+    position: relative;
+    
+    .content{
+
+        display: flex;
+        justify-content: space-around;
+        align-items: center;    
+        width: 100%;
+        margin-top: 100px;
+
+        .text-network-content{
+
+            position: relative;
+            display: flex;
+
+            .text-network{
+                display: flex;
+                flex-direction: column;
+                max-width: 550px;
+
+                .greetings{
+                    font-size: 15px;
+                    padding: 6px 15px;
+                    border-radius: 100px;
+                    border: 1px solid black;
+                    width: fit-content;
+                    margin-bottom: 10px;
+                }
+
+                .name{
+                    font-weight: bold;
+                    font-size: 3.5rem;
+                    flex-wrap: nowrap;
+                    margin-bottom: 15px;
+                    overflow: hidden;
+
+                    .firstname{
+                        display:inline-block;
+                        letter-spacing: -2px;
+                    }
+
+
+                    .lastname{
+                        display:inline-block;
+                        margin-left: 15px;
+                        letter-spacing: -2px;
+                    }
+
+                }
+
+                .what-i-do{
+                    font-size: 15px;
+                    line-height: 23px;
+                    z-index: 1;
+                    margin-bottom: 20px;
+                    overflow: hidden;
+
+                    span{
+                        position: relative;
+                        font-weight: bold;
+                        font-size: 18px;
+
+                        &::after{
+                            position: absolute;
+                            z-index: -1;
+                            bottom: 1px;
+                            left: 0;
+                            content: '';
+                            width: 100%;
+                            height: 5px;
+                            border-radius: 10px;
+                            background-color: var(--pf-yellow-color);
+                        }
+                    }
+                }
+
+
+            .networks{
+                display: flex;
+                gap: 1rem;
+
+                .network{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 45px;
+                    height: 45px;
+                    border: 1px solid var(--pf-dark-blue-color);
+                    cursor: pointer;
+                    font-size: 25px;
+                    border-radius: 50px;
+                    color: var(--pf-dark-blue-color);
+                    
+                    &:hover{
+                        transform: translateY(-10px);
+                        background-color: var(--pf-dark-blue-color);
+                        color: white;
+                        box-shadow: #ffcc00 0px 5px 10px ;
+                        transition: all 0.2s ease-in-out ;
+                    }
+
+                    .linkedin{
+                        color: #0a66c2;
+                    }
+        
+                    .github{
+                        color: black;
+                    }
+        
+                    .instagram{
+                        color: rgb(182, 69, 140);
+                    }
+                }
+
+            }
+
+            }
+        }
+
+        .hero-image{
+            width: 370px;
+        }
+    }
+    
+    .rotating-text{
+        position: absolute;
+        bottom: -40px;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0; /* Initially hide the element */
+        transform: translateY(100%); /* Move the element off-screen */
+        z-index: 1;
+        /* Animation */
+        animation-name: reveal;
+        animation-duration: 0.8s; /* Animation duration */
+        animation-timing-function: ease-in-out; /* Animation timing */
+        animation-delay: 2s; /* Delay before animation starts */
+        animation-fill-mode: forwards;
+        cursor: pointer;
+
+        .arrows{
+            position: absolute;
+            font-size: 1.9rem;
+            color: var(--pf-dark-blue-color);
+            transform: translate(-50%);
+            bottom: 30%;
+            animation : updownarrow 0.9s cubic-bezier(0.075, 0.82, 0.665, 1) infinite alternate;
+        }
+
+        p{
+            height: 160px;
+            font-size: 16px;
+            animation: spinningtext 15s linear infinite;
+        }
+
+        @keyframes updownarrow {
+            100%{
+                bottom: 50%;
+            }
+        }
+
+        @keyframes spinningtext {
+            from{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes reveal {
+            from {
+              opacity: 0;
+              transform: translateY(100%);
+            }
+            to {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+    }
+
+    svg{
+        position:absolute;
+        left:0;
+        bottom: 0;
+    }
+}

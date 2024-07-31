@@ -1,0 +1,48 @@
+.projet-details-modal{
+    background: var(--pf-background-color);
+    max-height: 100%;
+    width: 100%;
+
+
+
+    .p-dialog-content{
+        .project-details{
+            .header{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 5rem;
+                position: absolute;
+                width: 100%;
+                top: 0;
+                left: 0;
+                background-color: white;
+                box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+                z-index: 9;
+                
+                .content{
+                    width: 100%;
+                    display: flex;
+                    justify-content: flex-end;
+
+                    button{
+                        width: fit-content;
+                        background-color: transparent;
+                        cursor: pointer;
+                        color: var(--pf-dark-blue-color);
+                        transition: all 0.3s ease-in-out;
+                        padding: 10px 25px;
+                        font-size: 18px;
+                        border-radius: 5px;
+                        border: 2px solid var(--pf-dark-blue-color);
+        
+                        &:hover{
+                            background-color: var(--pf-dark-blue-color);
+                            color: white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
