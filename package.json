@@ -47,11 +47,9 @@
     "@nguniversal/express-engine": "^16.2.0",
     "aos": "^2.3.4",
     "express": "^4.15.2",
-    "primeicons": "^6.0.1",
-    "primeng": "^16.4.2",
     "rxjs": "^7.4.0",
     "tslib": "^2.3.0",
-    "zone.js": "^0.13.0"
+    "zone.js": "^0.14.6"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^16.2.10",
