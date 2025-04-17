@@ -15,19 +15,18 @@ import { ServicesComponent } from './components/services/services.component';
 import { ProjectDetailsComponent } from 'src/app/shared/compopents/project-details/project-details.component';
 
 @Component({
-  selector: 'app-page-home',
-  standalone: true,
-  imports: [
-    ProjectDetailsComponent,
-    HeroBannerComponent,
-    ProjectsComponent,
-    AboutComponent,
-    ServicesComponent,
-    ContactComponent
-  ],
-  templateUrl: './page-home.component.html',
-  styleUrls: ['./page-home.component.scss'],
-  providers:[MessageService, DialogService]
+    selector: 'app-page-home',
+    imports: [
+        ProjectDetailsComponent,
+        HeroBannerComponent,
+        ProjectsComponent,
+        AboutComponent,
+        ServicesComponent,
+        ContactComponent
+    ],
+    templateUrl: './page-home.component.html',
+    styleUrls: ['./page-home.component.scss'],
+    providers: [MessageService, DialogService]
 })
 export class PageHomeComponent implements OnInit {
 

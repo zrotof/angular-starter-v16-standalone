@@ -7,14 +7,13 @@ import { faArrowDown  } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @Component({
-  selector: 'app-hero-banner',
-  standalone: true,
-  imports: [
-    NgOptimizedImage,
-    FontAwesomeModule
-  ],
-  templateUrl: './hero-banner.component.html',
-  styleUrls: ['./hero-banner.component.scss']
+    selector: 'app-hero-banner',
+    imports: [
+        NgOptimizedImage,
+        FontAwesomeModule
+    ],
+    templateUrl: './hero-banner.component.html',
+    styleUrls: ['./hero-banner.component.scss']
 })
 export class HeroBannerComponent implements AfterViewInit{
   

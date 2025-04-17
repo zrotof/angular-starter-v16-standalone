@@ -3,13 +3,12 @@ import { Component, OnInit } from '@angular/core';
 
 
 @Component({
-  selector: 'app-about',
-  standalone: true,
-  imports: [
-    NgOptimizedImage,
-  ],
-  templateUrl: './about.component.html',
-  styleUrls: ['./about.component.scss']
+    selector: 'app-about',
+    imports: [
+        NgOptimizedImage,
+    ],
+    templateUrl: './about.component.html',
+    styleUrls: ['./about.component.scss']
 })
 export class AboutComponent implements OnInit{
 

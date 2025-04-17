@@ -8,15 +8,14 @@ import * as AOS from 'aos';
 
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
-  standalone : true,
-  imports : [
-    RouterOutlet,
-    HeaderComponent,
-    FooterComponent
-  ]
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss'],
+    imports: [
+        RouterOutlet,
+        HeaderComponent,
+        FooterComponent
+    ]
 })
 export class AppComponent implements OnInit {
   ngOnInit(): void {

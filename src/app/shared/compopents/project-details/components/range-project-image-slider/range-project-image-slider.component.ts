@@ -5,16 +5,15 @@ import { CarouselModule } from 'primeng/carousel';
 import { GalleriaModule } from 'primeng/galleria';
 
 @Component({
-  selector: 'app-range-project-image-slider',
-  standalone: true,
-  imports: [
-    NgStyle,
-    CarouselModule,
-    GalleriaModule
-  ],
-  templateUrl: './range-project-image-slider.component.html',
-  styleUrls: ['./range-project-image-slider.component.scss'],
-  encapsulation : ViewEncapsulation.None
+    selector: 'app-range-project-image-slider',
+    imports: [
+        NgStyle,
+        CarouselModule,
+        GalleriaModule
+    ],
+    templateUrl: './range-project-image-slider.component.html',
+    styleUrls: ['./range-project-image-slider.component.scss'],
+    encapsulation: ViewEncapsulation.None
 })
 export class RangeProjectImageSliderComponent implements OnInit {
   

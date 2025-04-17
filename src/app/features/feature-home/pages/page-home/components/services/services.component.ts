@@ -4,14 +4,13 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faPalette, faCode, faRocket, faChalkboardTeacher } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
-  selector: 'app-services',
-  standalone: true,
-  imports: [
-    NgOptimizedImage,
-    FontAwesomeModule
-  ],
-  templateUrl: './services.component.html',
-  styleUrls: ['./services.component.scss']
+    selector: 'app-services',
+    imports: [
+        NgOptimizedImage,
+        FontAwesomeModule
+    ],
+    templateUrl: './services.component.html',
+    styleUrls: ['./services.component.scss']
 })
 
 export class ServicesComponent {

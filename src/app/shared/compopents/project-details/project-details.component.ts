@@ -4,16 +4,15 @@ import { RangeProjectImageSliderComponent } from './components/range-project-ima
 import { ProjectDetailsCaseStudyComponent } from './components/project-details-case-study/project-details-case-study.component';
 import { ProjectDetailsHeroBannerComponent } from './components/project-details-hero-banner/project-details-hero-banner.component';
 @Component({
-  selector: 'app-project-details',
-  standalone: true,
-  templateUrl: './project-details.component.html',
-  styleUrls: ['./project-details.component.scss'],
-  encapsulation : ViewEncapsulation.None,
-  imports: [
-    ProjectDetailsHeroBannerComponent,
-    RangeProjectImageSliderComponent,
-    ProjectDetailsCaseStudyComponent
-  ]
+    selector: 'app-project-details',
+    templateUrl: './project-details.component.html',
+    styleUrls: ['./project-details.component.scss'],
+    encapsulation: ViewEncapsulation.None,
+    imports: [
+        ProjectDetailsHeroBannerComponent,
+        RangeProjectImageSliderComponent,
+        ProjectDetailsCaseStudyComponent
+    ]
 })
 
 export class ProjectDetailsComponent implements OnInit {

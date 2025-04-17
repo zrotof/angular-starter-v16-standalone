@@ -5,17 +5,16 @@ import { NavSmallScreenComponent } from '../nav-small-screen/nav-small-screen.co
 import { DialogModule } from 'primeng/dialog';
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss'],
-  standalone : true,
-  imports: [
-    NgClass,
-    RouterLink,
-    NgOptimizedImage,
-    NavSmallScreenComponent,
-    DialogModule
-  ]
+    selector: 'app-header',
+    templateUrl: './header.component.html',
+    styleUrls: ['./header.component.scss'],
+    imports: [
+        NgClass,
+        RouterLink,
+        NgOptimizedImage,
+        NavSmallScreenComponent,
+        DialogModule
+    ]
 })
 export class HeaderComponent implements AfterViewInit {
 

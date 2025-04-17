@@ -20,19 +20,18 @@ import {
 }from '@fortawesome/free-solid-svg-icons'
 
 @Component({
-  selector: 'app-contact',
-  standalone: true,
-  imports: [
-    NgIf,
-    ToastModule,
-    FontAwesomeModule,
-    ReactiveFormsModule,
-    ProgressSpinnerModule
-  ],
-  templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.scss'],
-  providers:[MessageService],
-  encapsulation : ViewEncapsulation.None
+    selector: 'app-contact',
+    imports: [
+        NgIf,
+        ToastModule,
+        FontAwesomeModule,
+        ReactiveFormsModule,
+        ProgressSpinnerModule
+    ],
+    templateUrl: './contact.component.html',
+    styleUrls: ['./contact.component.scss'],
+    providers: [MessageService],
+    encapsulation: ViewEncapsulation.None
 })
 export class ContactComponent {
 

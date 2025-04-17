@@ -3,13 +3,12 @@ import { ProjectDetail, ProjectSummary } from 'src/app/core/models/project';
 import { ProjectDetailsComponent } from 'src/app/shared/compopents/project-details/project-details.component';
 
 @Component({
-  selector: 'app-projects',
-  standalone: true,
-  imports: [
-    ProjectDetailsComponent
-  ],
-  templateUrl: './projects.component.html',
-  styleUrls: ['./projects.component.scss']
+    selector: 'app-projects',
+    imports: [
+        ProjectDetailsComponent
+    ],
+    templateUrl: './projects.component.html',
+    styleUrls: ['./projects.component.scss']
 })
 export class ProjectsComponent {
 
