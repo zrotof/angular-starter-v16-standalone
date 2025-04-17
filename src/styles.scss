@@ -40,7 +40,7 @@ ul{
         width: 2em;
         height: 3px;
         bottom:0;
-        border-bottom: 4px solid var(--pf-yellow-color);
+        border-bottom: 4px solid var(--project-yellow-primary-color);
     }
 }
 
@@ -55,6 +55,6 @@ ul{
 }
 
 .active-link{
-    background-color: var(--pf-dark-blue-color);
-    color: var(--pf-yellow-color) !important;
+    background-color: var(--project-blue-primary-color);
+    color: var(--project-yellow-primary-color) !important;
 }

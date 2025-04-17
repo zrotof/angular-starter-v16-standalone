@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, ElementRef, Renderer2, ViewChild } from '@angular/core';
-import { NgFor, ViewportScroller } from '@angular/common';
+import { NgFor, NgOptimizedImage, ViewportScroller } from '@angular/common';
 
 import { faLinkedinIn, faGithub, faInstagram  } from '@fortawesome/free-brands-svg-icons';
 import { faArrowDown  } from '@fortawesome/free-solid-svg-icons';
@@ -10,7 +10,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
   selector: 'app-hero-banner',
   standalone: true,
   imports: [
-    NgFor,
+    NgOptimizedImage,
     FontAwesomeModule
   ],
   templateUrl: './hero-banner.component.html',

@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, HostListener, Inject, Renderer2 } from '@angular/core';
-import { DOCUMENT, NgClass, ViewportScroller } from '@angular/common';
+import { DOCUMENT, NgClass, NgOptimizedImage, ViewportScroller } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { NavSmallScreenComponent } from '../nav-small-screen/nav-small-screen.component';
 import { DialogModule } from 'primeng/dialog';
@@ -12,6 +12,7 @@ import { DialogModule } from 'primeng/dialog';
   imports: [
     NgClass,
     RouterLink,
+    NgOptimizedImage,
     NavSmallScreenComponent,
     DialogModule
   ]

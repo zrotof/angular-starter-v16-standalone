@@ -1,0 +1,43 @@
+<div class="project-details-hero-banner">
+  <div class="content my-container">
+    <div class="texts-bloc">
+      <div class="tags">
+        <div class="tag">
+          <fa-icon
+            [icon]="'faBriefcase' | convertStringLabelToFontawesomeIcon"
+          ></fa-icon>
+
+          <span>Politique</span>
+        </div>
+
+        <div class="tag">
+          <fa-icon
+            [icon]="'faHourglass' | convertStringLabelToFontawesomeIcon"
+          ></fa-icon>
+          <span> ~ 6 Mois </span>
+        </div>
+      </div>
+
+      <h1>{{ hero.activity }}</h1>
+      <p>{{ hero.summary }}</p>
+
+      @if (hero?.links) {
+      <div class="buttons">
+        @for (link of hero?.links; track $index) { @if(link.type === 'public'){
+        <button class="public">Visiter le site web</button>
+        }@else {
+        <button class="admin">Démo de la partie admin</button>
+        } }
+      </div>
+      }
+    </div>
+
+    <div class="image-wrapper">
+      <img
+        ngSrc="../../../../assets/img/projects/ev-responsive.png"
+        alt="{{ hero.activity }}"
+        fill
+      />
+    </div>
+  </div>
+</div>

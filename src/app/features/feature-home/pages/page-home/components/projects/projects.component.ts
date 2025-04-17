@@ -1,5 +1,4 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { NgFor } from '@angular/common';
 import { ProjectDetail, ProjectSummary } from 'src/app/core/models/project';
 import { ProjectDetailsComponent } from 'src/app/shared/compopents/project-details/project-details.component';
 
@@ -7,7 +6,6 @@ import { ProjectDetailsComponent } from 'src/app/shared/compopents/project-detai
   selector: 'app-projects',
   standalone: true,
   imports: [
-    NgFor,
     ProjectDetailsComponent
   ],
   templateUrl: './projects.component.html',

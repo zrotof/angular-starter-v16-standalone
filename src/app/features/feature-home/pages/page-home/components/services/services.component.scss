@@ -1,17 +1,19 @@
 .services{
+    position: relative;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: --pf-dark-blue-color;
-    background-color: --pf-dark-blue-color;
     overflow: hidden;
-    position: relative;
     padding-top: 100px;
-    background-image: url("../../../../../../../assets/img/services-bg.png");
     padding-top: 5rem;
 
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
     #wave-top{
         position:absolute;
         left:0;
@@ -32,6 +34,7 @@
         flex-direction: column;
         width: 100%;
         color: white;
+        position: relative;
 
         .speach{
             margin: 50px 0;
@@ -52,13 +55,12 @@
                 h3{
                     font-weight: bold;
                     font-size: 1.6rem;
-                    color: --pf-yellow-color;
-                    position: relative;
+                    color: --project-yellow-primary-color;
                     margin-bottom: 50px;
                     line-height: 40px;
                 }
 
-                span{
+                p{
                     font-size: 15px;
                     line-height: 23px;
                     margin-bottom: 10px;
@@ -109,7 +111,7 @@
 
                     fa-icon{
                         font-size: 2.5em;
-                        color: var(--pf-yellow-color);
+                        color: var(--project-yellow-primary-color);
                     }
 
                     .service-title{

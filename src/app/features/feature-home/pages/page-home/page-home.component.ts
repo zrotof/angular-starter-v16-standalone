@@ -1,21 +1,23 @@
 import { Component, OnInit } from '@angular/core';
-import { HeroBannerComponent } from './components/hero-banner/hero-banner.component';
-import { ProjectsComponent } from './components/projects/projects.component';
-import { AboutComponent } from './components/about/about.component';
-import { ServicesComponent } from './components/services/services.component';
-import { ContactComponent } from './components/contact/contact.component';
-import { ProjectsService } from 'src/app/core/services/projects/projects.service';
-import { NgFor } from '@angular/common';
-import { ProjectDetailsComponent } from 'src/app/shared/compopents/project-details/project-details.component';
+
+import { ProjectDetail, ProjectSummary } from 'src/app/core/models/project';
 
 import { DialogService, DynamicDialogRef } from 'primeng/dynamicdialog';
 import { MessageService } from 'primeng/api';
-import { ProjectDetail, ProjectSummary } from 'src/app/core/models/project';
+
+import { ProjectsService } from 'src/app/core/services/projects/projects.service';
+
+import { HeroBannerComponent } from './components/hero-banner/hero-banner.component';
+import { AboutComponent } from './components/about/about.component';
+import { ProjectsComponent } from './components/projects/projects.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { ServicesComponent } from './components/services/services.component';
+import { ProjectDetailsComponent } from 'src/app/shared/compopents/project-details/project-details.component';
+
 @Component({
   selector: 'app-page-home',
   standalone: true,
   imports: [
-    NgFor,
     ProjectDetailsComponent,
     HeroBannerComponent,
     ProjectsComponent,

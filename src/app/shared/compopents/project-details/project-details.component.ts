@@ -1,22 +1,19 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { DynamicDialogConfig, DynamicDialogRef } from 'primeng/dynamicdialog';
-import { ProjectDetailsHeroBannerComponent } from '../project-details-hero-banner/project-details-hero-banner.component';
-import { RangeProjectImageSliderComponent } from '../range-project-image-slider/range-project-image-slider.component';
-import { NgFor, NgIf } from '@angular/common';
-import { ProjectDetailsCaseStudyComponent } from '../project-details-case-study/project-details-case-study.component';
+import { RangeProjectImageSliderComponent } from './components/range-project-image-slider/range-project-image-slider.component';
+import { ProjectDetailsCaseStudyComponent } from './components/project-details-case-study/project-details-case-study.component';
+import { ProjectDetailsHeroBannerComponent } from './components/project-details-hero-banner/project-details-hero-banner.component';
 @Component({
   selector: 'app-project-details',
   standalone: true,
+  templateUrl: './project-details.component.html',
+  styleUrls: ['./project-details.component.scss'],
+  encapsulation : ViewEncapsulation.None,
   imports: [
-    NgIf,
-    NgFor,
     ProjectDetailsHeroBannerComponent,
     RangeProjectImageSliderComponent,
     ProjectDetailsCaseStudyComponent
-  ],
-  templateUrl: './project-details.component.html',
-  styleUrls: ['./project-details.component.scss'],
-  encapsulation : ViewEncapsulation.None
+  ]
 })
 
 export class ProjectDetailsComponent implements OnInit {

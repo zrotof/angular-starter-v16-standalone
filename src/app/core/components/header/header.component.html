@@ -1,10 +1,11 @@
 <header (scroll)="onWindowScroll()" [ngClass]="shouldApplyBackground ? 'navbar-background-on-scroll' : ''">
 
     <div class="content header-container">
-        <img class="logo" src="../../../assets/img/logo-portfolio.png" alt="logo sm digitalizer"/>
+        <div class="logo-wrapper">
+            <img ngSrc="../assets/img/logo-portfolio.png" alt="logo sm digitalizer" fill/>
+        </div>
 
         <div class="header-right">
-
             <nav>
                 <ul>
                     <li>

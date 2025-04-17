@@ -468,7 +468,7 @@ export class ProjectsService {
         id: 6,
         name : "Amadou Bâ 2024",
         activity : "Campagne présidentielles sénégalaise 2024",
-        summary : "Application web de promotion du candidat Amadou BÂ pour les élections présidentielles. Développement et test Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum dolore tempore odio consequuntur pariatur alias sint hic aut, debitis similique numquam molestias vitae autem maxime rem expedita cum ex placeat?Lorem ipsum dolor sit amet, consectetur adipisicing elit.?",
+        summary : "Application web de promotion du candidat Amadou BÂ pour les élections présidentielles. Développement et test Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum debitis similique numquam molestias vitae autem maxime rem?",
         isAppOnline : true,
         links : [
           {

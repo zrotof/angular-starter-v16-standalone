@@ -1,12 +1,12 @@
+import { NgOptimizedImage } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 @Component({
   selector: 'app-about',
   standalone: true,
   imports: [
-    FontAwesomeModule
+    NgOptimizedImage,
   ],
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.scss']

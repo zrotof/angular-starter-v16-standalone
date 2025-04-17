@@ -67,7 +67,7 @@
 
                     .p-highlight{
                         button{
-                            background-color: var(--pf-dark-blue-color);
+                            background-color: var(--project-blue-primary-color);
                             position: relative;
                             width: 1.5rem;
                             height: 1.5rem;
@@ -80,7 +80,7 @@
                                 transform: translate(-50%, -50%);
                                 width: 0.7rem;
                                 height: 0.7rem;
-                                background-color: var(--pf-yellow-color);
+                                background-color: var(--project-yellow-primary-color);
                                 border-radius: 50%;
                             }
                         }

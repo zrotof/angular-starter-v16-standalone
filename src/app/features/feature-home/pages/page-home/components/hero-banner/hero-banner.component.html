@@ -13,22 +13,28 @@
                 </p>
                        
                 <div class="networks">  
-                    <ng-container *ngFor="let network of networks; let i=index">
-                        <div class="network" data-aos="fade-up" [attr.data-aos-delay]="200*(i+1)" (click)="openNetwork(network.link)" >
+                    @for (network of networks; track $index) {
+                        <div class="network" data-aos="fade-up" [attr.data-aos-delay]="200*($index+1)" (click)="openNetwork(network.link)" >
                             <fa-icon  [icon]="network.icon"></fa-icon>
                         </div>
-                    </ng-container>
+                    }
                 </div>
             </div>  
         </div>
-        <img 
+
+        <div 
+            class="image-wrapper" 
             data-aos="fade-left"
             data-aos-delay="900"
-            data-aos-duration="700"
-            src="../../../assets/img/moi-hero-banner.png" 
-            alt="Image of Samuel Mandeng" 
-            class="hero-image"
+            data-aos-duration="700">
+            <img 
+                ngSrc="../../../assets/img/moi-hero-banner.png" 
+                alt="Image of Samuel Mandeng" 
+                class="hero-image"
+                fill
+                priority
             >
+        </div>
     </div>
     <div 
         class="rotating-text" 
